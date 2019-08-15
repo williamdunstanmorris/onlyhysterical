@@ -10,8 +10,6 @@ const HeaderNav = () => (
       <Link to="/styles">Styles</Link>
       <Link to="/styles">Records</Link>
       <Link to="/styles">Rooster</Link>
-      <Link to="/styles">Hello</Link>
-
     </nav>
     <div className="logo light">
       <Link to="/" className="logo-link">
