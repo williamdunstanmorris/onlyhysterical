@@ -7,3 +7,23 @@ before_install:
 
 script:
   - docker run -e CI=true williamdunstanmorris/onlyhyst npm run test -- --coverage
+
+deploy:
+  # pre-configured providers that come with travis
+  provider: elasticbeanstalk
+  # region provided in quotes, because this is a total mess.
+  region: "us-east-2"
+  # name of app on elastic beanstalk AWS console.
+  app: "onlyhystericalweb"
+  # view the breadcrumb trail on AWS EB app -> env i.e. onlyhystericalweb -> Docker-env
+  env: "Onlyhystericalweb-env"
+  # travis deploys code base -> zipped in code repo -> code bucket hard drive running on AWS used for travis
+  bucket_name: elasticbeanstalk-us-east-2-419733254206
+  bucket_path: "onlyhystericalweb"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+
+# Environment ID: e-bxqx3aipgq, URL: Onlyhystericalweb-env.qmzdp3inxr.us-east-2.elasticbeanstalk.com
