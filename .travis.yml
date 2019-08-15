@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t williamdunstanmorris/onlyhyst -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true williamdunstanmorris/onlyhyst npm run test -- --coverage
