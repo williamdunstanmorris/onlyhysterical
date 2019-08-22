@@ -11,8 +11,7 @@ const Moltin = MoltinGateway({
   application: 'react-demo-store'
 });
 
-export const GetProducts = () =>
-  Moltin.Products.With('files, main_images, collections').All();
+export const GetProducts = () => Moltin.Products.With('files, main_images, collections').All();
 
 export const GetProduct = ID => Moltin.Products.Get(ID);
 
@@ -28,14 +27,11 @@ export const GetFile = ID => Moltin.Files.Get(ID);
 
 export const AddCart = (id, quantity) => Moltin.Cart().AddProduct(id, quantity);
 
-export const UpdateCartPlus = (ID, quantity) =>
-  Moltin.Cart().UpdateItemQuantity(ID, quantity + 1);
+export const UpdateCartPlus = (ID, quantity) => Moltin.Cart().UpdateItemQuantity(ID, quantity + 1);
 
-export const UpdateCartMinus = (ID, quantity) =>
-  Moltin.Cart().UpdateItemQuantity(ID, quantity - 1);
+export const UpdateCartMinus = (ID, quantity) => Moltin.Cart().UpdateItemQuantity(ID, quantity - 1);
 
-export const UpdateCart = (ID, quantity) =>
-  Moltin.Cart().UpdateItemQuantity(ID, quantity);
+export const UpdateCart = (ID, quantity) => Moltin.Cart().UpdateItemQuantity(ID, quantity);
 
 export const GetCartItems = () => Moltin.Cart().Items();
 
