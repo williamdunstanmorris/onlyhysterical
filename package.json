@@ -11,24 +11,41 @@
   },
   "dependencies": {
     "@moltin/sdk": "^3.18.1",
+    "foundation-sites": "^6.5.3",
+    "gulp-autoprefixer": "^7.0.0",
     "history": "^4.7.2",
-    "node-sass": "^4.12.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-mailchimp-subscribe": "^2.1.0",
+    "react-marquee": "^1.0.0",
+    "react-player": "^1.12.0",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-router-redux": "next",
     "react-scripts": "1.1.0",
+    "react-soundplayer": "^1.0.4",
     "redux": "^3.7.1",
     "redux-form": "7.2.3",
     "redux-thunk": "2.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "fibers": "^4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
+    "node-sass": "^4.12.0",
     "prettier": "1.10.2",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "sass": "^1.22.10"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
