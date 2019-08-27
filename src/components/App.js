@@ -10,12 +10,20 @@ import SingleProductContainer from './Products/SingleProductContainer';
 import OneClickCheckout from './Checkout/OneClickCheckout';
 import OrderConfirmationContainer from './Orders/OrderConfirmationContainer';
 import NotFound from './global/NotFound';
-// import MobileNav from './global/Mobile/MobileNav';
+
+import MobileNav from './global/Mobile/MobileNav';
+import HeaderNav from './global/HeaderNav';
+
+import Marquee from 'react-marquee'
 import Footer from './global/Footer';
 
 const App = props => (
-  <div>
-    {/* <MobileNav /> */}
+  <div className="site">
+    <HeaderNav />
+
+    <main role="main" id="container" className="content-container">
+
+    <Marquee className="site-marquee" loop={false} hoverToStop={true} text="this is a very very very very very very very very very very very very very very very very this is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long text" />
 
     <Switch>
       <Route exact path="/" component={Home} />
@@ -34,8 +42,8 @@ const App = props => (
       />
       <Route path="*" component={NotFound} />
     </Switch>
-
     <Footer />
+    </main>
   </div>
 );
 

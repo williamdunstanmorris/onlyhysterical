@@ -24,7 +24,7 @@ class CheckoutContainer extends Component {
       return (
         <div>
           <MobileNav />
-          <CartHeader />
+          {/*<CartHeader />*/}
           <CheckoutForm />
         </div>
       );
@@ -32,7 +32,7 @@ class CheckoutContainer extends Component {
       return (
         <div>
           <MobileNav />
-          <CartHeader />
+          {/*<CartHeader />*/}
           <Loading />
         </div>
       );

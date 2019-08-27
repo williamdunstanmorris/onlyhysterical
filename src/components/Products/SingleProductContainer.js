@@ -26,7 +26,7 @@ class Product extends Component {
       return (
         <div>
           <MobileNav />
-          <ProductHeader />
+          {/*<ProductHeader />*/}
           <SingleProduct />
         </div>
       );

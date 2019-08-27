@@ -3,12 +3,17 @@ import { connect } from 'react-redux';
 import ProductImage from './ProductImage';
 import * as api from '../../moltin';
 
+import { withSoundCloudAudio } from 'react-soundplayer/addons';
+import { PlayButton, Progress, Icons, Cover } from 'react-soundplayer/components';
+
 import { UPDATE_QUANTITY } from '../../ducks/product';
 import {
   FETCH_CART_START,
   FETCH_CART_END,
   CART_UPDATED
 } from '../../ducks/cart';
+
+const { SoundCloudLogoSVG } = Icons;
 
 const mapStateToProps = state => {
   return state;
@@ -81,11 +86,18 @@ class SingleProduct extends Component {
           <div className="content">
             <div className="product-listing">
               <div className="product-image">
-                <ProductImage
+              <Cover
+                className="product-album-cover"
+                trackName={String}
+                artistName="Ascimo"
+                backgroundUrl="https://i1.sndcdn.com/artworks-000168705014-y0hq07-t500x500.jpg" />
+
+
+                {/*<ProductImage
                   product={product}
                   products={products}
                   background={background}
-                />
+                />*/}
               </div>
               <div className="product-description">
                 <h2>{product.name}</h2>
@@ -100,62 +112,40 @@ class SingleProduct extends Component {
                   <p className="hide-content">Product details:</p>
                   <p>{product.description}</p>
                 </div>
-                <form className="product" noValidate>
-                  <div className="quantity-input">
-                    <p className="hide-content">Product quantity.</p>
-                    <p className="hide-content">
-                      Change the quantity by using the buttons, or alter the
-                      input directly.
-                    </p>
+
+                <div className="product-buy-stream">
+                  <form className="product" noValidate>
                     <button
-                      type="button"
-                      className="decrement number-button"
-                      onClick={() => {
-                        updateQuantity(this.props.product.quantity - 1);
+                      type="submit"
+                      className="submit"
+                      onClick={e => {
+                        addToCart(product.id);
+                        console.log(this.props.product.quantity);
+                        e.preventDefault();
                       }}>
-                      <span className="hide-content">Decrement quantity</span>
-                      <span aria-hidden="true">-</span>
+                      Buy
                     </button>
-                    <input
-                      className="quantity"
-                      name="number"
-                      type="number"
-                      min="1"
-                      max="10"
-                      value={this.props.product.quantity}
-                      size="2"
-                      onChange={event => {
-                        updateQuantity(event.target.value);
-                      }}
-                    />
+                  </form>
+                  <form className="product" noValidate>
                     <button
-                      type="button"
-                      className="increment number-button"
-                      onClick={() => {
-                        updateQuantity(this.props.product.quantity + 1);
+                      type="submit"
+                      className="submit"
+                      onClick={e => {
+                        addToCart(product.id);
+                        console.log(this.props.product.quantity);
+                        e.preventDefault();
                       }}>
-                      <span className="hide-content">Increment quantity</span>
-                      <span aria-hidden="true">+</span>
+                      Stream
                     </button>
-                  </div>
-                  <button
-                    type="submit"
-                    className="submit"
-                    onClick={e => {
-                      addToCart(product.id);
-                      console.log(this.props.product.quantity);
-                      e.preventDefault();
-                    }}>
-                    Add to cart
-                  </button>
-                </form>
+                  </form>
+                </div>
+                <p>
+                Since first emerging at the tail end of the ’90s, Simon Green aka Bonobo has become one of downtempo music’s brightest stars. Animal Magic – originally released in 2000 and Tru Thoughts’ first artist album – still sounds fresh with Bonobo’s signature beats encouraging a state of relaxed bliss that begs to be basked in as Green blends breakbeats, pad sounds, jazzy live instrumentation and naked emotion to create a sound all his own. Animal Magic’s underlying feeling and intelligent arrangements keep any listener’s interest, with Bonobo’s flair for dynamics, blissful melodies and crisp clean drums creating a magical aura on this classic release. Now repressed on yellow vinyl we are pleased to offer a new limited edition version of this seminal album.
+                </p>
               </div>
             </div>
             <div className="product-info">
               <div className="product-details">
-                <div className="header">
-                  <h3>Product details</h3>
-                </div>
                 <div className="details-body">
                   <div className="row">
                     <div className="label">Weight</div>
@@ -188,9 +178,6 @@ class SingleProduct extends Component {
                 </div>
               </div>
               <div className="product-details">
-                <div className="header">
-                  <h3>Dimensions (cm)</h3>
-                </div>
                 <div className="details-body">
                   <div className="row">
                     <div className="label">Height</div>
@@ -207,9 +194,6 @@ class SingleProduct extends Component {
                 </div>
               </div>
               <div className="product-details">
-                <div className="header">
-                  <h3>Delivery & returns</h3>
-                </div>
                 <div className="details-body">
                   <div className="row">
                     <div className="label">Dispatch</div>

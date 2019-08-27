@@ -47,16 +47,16 @@ class Home extends Component {
     ) {
       return (
         <div>
-          <MobileNav />
-          <HomeHeader />
+          {/*<MobileNav />*/}
+          {/*<HomeHeader />*/}
           <HomeMainSection />
         </div>
       );
     } else {
       return (
         <div>
-          <MobileNav />
-          <HomeHeader />
+          {/*<MobileNav />*/}
+          {/*<HomeHeader />*/}
           <Loading />
         </div>
       );

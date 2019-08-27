@@ -1,0 +1,21 @@
+
+.site-marquee {
+
+  padding: 10px 0;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+
+  span {
+    font-size: 15px;
+  }
+
+  @media (min-width: 1024px){
+
+  }
+
+}
+
+ol li::before, ul li::before {
+    content: '';
+}

@@ -1,0 +1,32 @@
+.header {
+    width:160px;
+    height:100%;
+    padding: 30px 0 0 30px;
+    position: fixed;
+    // background: grey;
+    left: 0;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 768px) {
+		width:100%;
+	    height:80px;
+	    padding: 15px;
+	    top: 0;
+	    z-index: 9;
+	   }
+}
+.logo {
+    height: 94px;
+    width: 38px;
+    position: relative;
+    z-index: 99;
+    display: block;
+    background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOC4zNiA5NC4yNSI+PHBhdGggZD0iTTQzLjM3LDQxLjg4djUuMzZjMCw1Ljc5LDIuMTEsOSwxMC4xOCw5LDYuMTUsMCwxMC4xOC0yLjY4LDEwLjE4LTkuMDlWNDEuODhINDMuMzdaTTY5LjE4LDM2VjQ3YzAsMTAuNzktNi42NywxNS4zNi0xNS42MiwxNS4zNi0xMC4xOCwwLTE1LjYyLTUtMTUuNjItMTQuMjdWMzZINjkuMThaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzAuODIgLTM2KSIvPjxwYXRoIGQ9Ik01MS44OSw3OS40NmE1LDUsMCwwLDAsNC4zOS01LDUuNzIsNS43MiwwLDAsMC00LjM5LTUuNzV2MTAuOFptLTQuMTMtMTAuOGE1LjY0LDUuNjQsMCwwLDAtNS40NCw1Ljc1LDcuMjEsNy4yMSwwLDAsMCwzLjE2LDYuNDFsLTIuNjMsNC41MmMtMi41NS0xLjY3LTUuNDQtNC44Ny01LjQ0LTEwLjkzQzM3LjQsNjcuMjIsNDIuNDEsNjMsNDksNjNzMTEuNjMsNC4xNywxMS42MywxMS4zN2MwLDcuNDItNSwxMC42Ni0xMi45LDEwLjY2VjY4LjY3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMwLjgyIC0zNikiLz48cGF0aCBkPSJNNTEuODksMTAyLjE2YTUsNSwwLDAsMCw0LjM5LTUsNS43Myw1LjczLDAsMCwwLTQuMzktNS43NXYxMC44Wm0tNC4xMy0xMC44YTUuNjQsNS42NCwwLDAsMC01LjQ0LDUuNzUsNy4yMSw3LjIxLDAsMCwwLDMuMTYsNi40MUw0Mi44NSwxMDhjLTIuNTUtMS42Ny01LjQ0LTQuODctNS40NC0xMC45MywwLTcuMiw1LTExLjM3LDExLjYzLTExLjM3czExLjYzLDQuMTcsMTEuNjMsMTEuMzdjMCw3LjQyLTUsMTAuNjctMTIuOSwxMC42N1Y5MS4zNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMC44MiAtMzYpIi8+PHBhdGggZD0iTTQ5LDEyNC42NGMzLjIsMCw2LjcxLTEuMjMsNi43MS01LjI3cy0zLjUxLTUuMjItNi43MS01LjI3LTYuNzEsMS4yMy02LjcxLDUuMjcsMy41MSw1LjIyLDYuNzEsNS4yN20xMS4xLTE1LjcxdjUuMzZINTguMjV2MC4wOWE5LDksMCwwLDEsMi40MSw2LjMyYzAsNS42Mi01LjIyLDkuNTctMTEuNjMsOS41N1MzNy40LDEyNi4zMSwzNy40LDEyMC42YTcuNiw3LjYsMCwwLDEsMi42OC02LjMySDMwLjgydi01LjM2SDYwLjE0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMwLjgyIC0zNikiLz48L3N2Zz4=) no-repeat left top;
+    margin: 0;
+
+    @media only screen and (max-width: 768px) {
+	    height: 50px;
+		  width: 21px;
+		  float: right;
+	}
+}

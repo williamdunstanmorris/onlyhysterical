@@ -1,0 +1,260 @@
+html, body {
+	height: 100%;
+}
+body {
+    margin:0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+h1, h2, h3, h4, h5 ,h6, p, ul, li {
+    padding:0;
+    margin:0;
+}
+.reset-a a {
+    text-decoration:none;
+    color:inherit;
+}
+.stick-bottom {
+    position:absolute;
+    bottom:6%;
+    left: 6%;
+}
+.inline-li li {
+    list-style-type: none;
+    display: inline-block;
+}
+.list-type-none {
+    list-style-type:none;
+}
+.relative {
+    position: relative;
+}
+.block-li li {
+    display:block;
+}
+.inline-a {
+    display:inline-block;
+}
+.align-center {
+    text-align:center;
+}
+.layered {
+    position: relative;
+}
+.layered > * {
+    position: absolute;
+}
+.layered > *:last-child {
+    position: static;
+}
+.full-center, .full-center-left {
+    width: 100%;
+    height: 100%;
+}
+.full-center >*,
+.full-center-left >* {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.full-center >* >*,
+.full-center-left >* >*{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.full-center-left >* >* {
+    text-align: left;
+}
+.uppercase {
+    text-transform:uppercase;
+}
+.underlined,
+.header .menu a:hover,
+.header .current-menu-item a {
+    border-bottom: 1px solid;
+}
+.underlined-ffc {
+    border-color:#abaeaf;
+}
+.cover img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @media only screen and (max-width: 550px) {
+		height: 100%;
+	}
+}
+.rotate {
+    position: absolute;
+    left: 3.6%;
+}
+.rotate {
+    display: inline-block;
+    overflow: hidden;
+    width: 1.5em;
+    padding: 0 5px;
+}
+.rotate-90-2 {
+    width: auto;
+}
+
+.rotate-top {top: 5%;}
+.rotate-bottom {
+    bottom: 10%;
+}
+.rotate-90 >*{
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-transform: translate(0,100%) rotate(90deg);
+    	-moz-transform: translate(0,100%) rotate(90deg);
+			-o-transform: translate(0,100%) rotate(90deg);
+				transform: translate(1.4em,0) rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    	-moz-transform-origin: 0 0;
+			-o-transform-origin: 0 0;
+				transform-origin: 0 0;
+	-webkit-backface-visibility: hidden;
+   /* IE9+ */
+   -ms-transform: none;
+   -ms-transform-origin: none;
+   /* IE8+ */
+   -ms-writing-mode: tb-rl;
+}
+.rotate-90-2 >*{
+    -webkit-transform: translate(0,100%) rotate(90deg);
+    	-moz-transform: translate(0,100%) rotate(90deg);
+			-o-transform: translate(0,100%) rotate(90deg);
+				transform: translate(2.2em,0) rotate(90deg);
+    -webkit-transform-origin: 0 0;
+		-moz-transform-origin: 0 0;
+			-o-transform-origin: 0 0;
+				transform-origin: 0 0;
+	-webkit-backface-visibility: hidden;
+	/* IE9+ */
+   -ms-transform: none;
+   -ms-transform-origin: none;
+   /* IE8+ */
+   -ms-writing-mode: tb-rl;
+}
+.rotate >*:before {
+    content: "";
+    float: left;
+    margin-top: 100%;
+}
+.rotate-90 span,
+.rotate-90-2 span {
+	line-height: 1.2;
+}
+.distribute {
+    text-align: justify;
+}
+.distribute >* {
+    display:inline-block;
+    vertical-align: middle;
+}
+.distribute:after {
+    content:"";
+    width:100%;
+    display:inline-block;
+}
+.p1 {
+    padding-bottom:40px;
+}
+.p2 {
+    padding-top: 20px;
+}
+.p3 {
+    padding-bottom:20px;
+}
+.p5 {
+    padding-top:90px;
+}
+.p6 {
+    padding:12% 10%;
+}
+.p7 {
+    padding: 6% 0 0 6%;
+
+    @media only screen and (max-width: 650px) {
+	    padding: 30px;
+	}
+}
+.p8 {
+    padding:0 10px;
+}
+.p9 {
+    padding:6% 0;
+}
+.p10 {
+    padding-bottom:70px;
+}
+.p11 {
+    padding-top:10px;
+}
+.p12 {
+    padding-right: 2%;
+}
+.m1 {
+    margin-left:100px;
+}
+.m2 {
+     margin:2% 0 0 2%;
+}
+.m3 {
+    margin-bottom: 6%;
+}
+.pfc {
+    color:#000000;
+}
+.sfc, .sfc-active .active {
+    color:#ffffff;
+}
+.tfc {
+    color:#4d4d4d;
+}
+.ffc {
+    color:#abaeaf;
+}
+.afc, .active, .afc-hover *:hover > a {
+    color:#666666;
+}
+.pbc {
+    background-color:#ffffff;
+}
+.sbc {
+    background-color:#efefed;
+}
+.tbc {
+    background-color:#f7f7f5;
+}
+.fbc {
+    background-color:#000000;
+}
+.content-container {
+	min-height: 100%;
+	max-width: 1600px;
+	//padding-bottom: 305px;
+	margin-left: 160px;
+	position: relative;
+	overflow: hidden;
+
+	@media (max-width: 768px) {
+		margin-top: 80px;
+		margin-left: 0;
+	}
+	@media (max-width: 1024px) {
+		max-width: 1024px;
+		overflow: hidden;
+	}
+	@media (min-width: 1920px) {
+		margin: 0 auto;
+	}
+}
+
+.site {
+	@media (min-width: 1024px) {
+		// padding: 10px;
+	}
+
+}

@@ -1,0 +1,17 @@
+.product-buy-stream {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-buy-stream form {
+    margin: 0 1.875rem 1.875rem 0;
+    width: calc((100% - 3.75rem)/ 2);
+}
+
+.product-album-cover {
+
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+
+  }
